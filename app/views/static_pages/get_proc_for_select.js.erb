@@ -1,0 +1,17 @@
+	$("#rs1").append("<%= j render(:partial => 'ajax_proc') %>");
+	
+	$('.advice_variant1').on('click',function(){
+        $('#searchInput1').val($(this).text());
+        $('#rs1').fadeOut(350).html('');
+    });
+	
+    $('#searchInput1').click(function(){
+        $('#rs1').show();
+    });
+	
+	$('html').click(function(){
+        $('#rs1').hide();
+    });
+
+
+

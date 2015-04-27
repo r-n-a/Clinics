@@ -1,0 +1,35 @@
+<nav>
+				<ul class="nav pull-right">
+						<li><%= link_to "Home",   root_path  %></li>
+					<% if user_signed_in? %>
+						<li id="fat-menu" class="dropdown" >
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								Account <b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" >
+								<li><%= link_to "Profile", edit_user_registration_path(current_user) %></li>
+								<li><%= link_to "Clinic", clinic_path(current_user) %></li>
+								<li><%= link_to "Procedures", procedures_path(current_user.clinics.first) %></li>
+								<li><%= link_to "New procedure", new_procedure_path %></li>
+						    </ul>
+						</li>
+						<li><%= link_to 'Log out', destroy_user_session_path, :method => :delete %></li>
+					<% else %>
+						<li><%= link_to "Sign in", new_user_registration_path %></li>
+						<li><%= link_to "Log in",  new_user_session_path %></li>
+				  <% end %>
+				</ul>
+			  </nav>
+				<div class="form-inline form-search pull-right">
+					<div class="input-group">
+						
+						<%= form_tag(searchp_path, method: "get") do %>
+						<label class="sr-only" for="searchInput1">What do you need?</label>
+						<label class="sr-only" for="searchInput2" style="margin-left: 40px;"  >Where?</label><br/>
+								<%= text_field_tag(:searchInput1, nil, placeholder: 'MRI') %>
+								<%= text_field_tag(:searchInput2, nil, placeholder: 'Nashville TN 37203') %>
+							<%= submit_tag("Search", class: "btn btn-primary" )  %>
+						<% end %>
+						<div class="row"><div id="rs1"></div><div id="rs2"></div></div>
+					</div>
+				</div>

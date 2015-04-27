@@ -1,0 +1,12 @@
+<% provide(:title, 'Test') %>
+
+<div class="order">
+		
+	<%= form_tag("/search", remote: true, id: "ts") do %>
+		<%= label_tag(:q, "Search for:") %>
+		<%= text_field_tag(:q, ) %>
+		<%= submit_tag("Search") %>
+	<% end %>
+		<div id="rs"> </div>
+		
+</div>

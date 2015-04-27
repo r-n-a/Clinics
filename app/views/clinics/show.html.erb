@@ -1,0 +1,34 @@
+<% provide(:title, @clinic.name) %>
+<hr>
+<div class="clinic-show">
+ 
+			<h1><%= @clinic.name %></h1>
+
+
+			<p class="clinic-typec"><%= @clinic.typec %></p>
+
+
+			<p class="clinic-typec"><%= @clinic.adress %></p>
+
+			
+			<p class="clinic-typec"><%= @clinic.tel %></p>
+
+			
+			<p class="clinic-typec"><%= @clinic.zipcode %></p>
+
+			
+			<p class="clinic-typec">User: <%= @clinic.user.email %></p>
+			
+
+			<p class="clinic-typec" ><%=  image_tag @clinic.avatar.url.to_s if @clinic.avatar? %></p>
+			
+			
+			<p class="clinic-typec"><%= link_to "Edit", edit_clinic_path %>	&nbsp;&nbsp;&nbsp;&nbsp;
+												   <%= link_to "Procedures list", procedures_path %>	&nbsp;&nbsp;&nbsp;&nbsp;
+												   <%= link_to "New procedure", new_procedure_path %>
+												   
+			</p>
+			
+</div>
+
+

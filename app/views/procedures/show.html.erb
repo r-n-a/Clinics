@@ -1,0 +1,28 @@
+<% provide(:title, @procedure.name) %>
+<hr>
+<div class="jumbotron">
+				<div class="row">
+					<div class="span3 clinic-img" >
+						<div class="img">
+							<%=  image_tag @procedure.clinic.avatar.url.to_s if @procedure.clinic.avatar? %>
+						</div>
+					</div>
+					<div class="span4 clinic-descr" >
+							<div class="title"><%= @procedure.clinic.name %></div>
+							<div class="adr">Adress: <%= @procedure.clinic.adress %></div>
+							<div class="tel">Tell: <%= @procedure.clinic.tel %></div>
+					</div>
+					<div class="span2 clinic-price" >
+						<div class="pname center"><%= @procedure.name %></div>
+						<div class="pprice center" >$<%= @procedure.cost %></div>
+					</div>
+				</div>
+				<% if user_signed_in? %>
+				<div class="clinic-typec vertical"><%= link_to "Procedure list", procedures_path %>	&nbsp;&nbsp;&nbsp;&nbsp;
+												   <%= link_to "Edit", edit_procedure_path %>	&nbsp;&nbsp;&nbsp;&nbsp;
+												   <%= link_to "Destroy", destroy_procedure_path(@procedure), method: :delete, data: { confirm: "You sure?" } %>
+				</div>
+				<% end %>
+</div>
+
+

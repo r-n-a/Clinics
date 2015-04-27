@@ -1,0 +1,17 @@
+<%= render 'layouts/header' %>
+  <body>
+  <div class="wrapper container">
+    <header class="navbar  navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container head">
+				<%= link_to "Find a Clinic", '#', id: "logo" %>
+				<%= render 'layouts/menu' %>
+        </div>
+      </div>
+    </header>
+    <div class="container content">
+		<%= yield %>
+ </div>
+ <%= render 'layouts/footer' %>
+  </body>
+</html>

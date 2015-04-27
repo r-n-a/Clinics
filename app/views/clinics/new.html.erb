@@ -1,0 +1,41 @@
+<% provide(:title, 'Add new clinic') %>
+<hr>
+<div class="clinic-show">
+<h1>Add new clinic</h1>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @clinic, html: { multipart: true } do |f| %>
+		  <%= render 'shared/error_messages', object: f.object %>
+		 <div class="field">
+		 <%= f.label :name %>
+		 <%= f.text_field :name %>
+		 </div>
+		  <div class="field">
+		 <%= f.label :typec, "Type" %>
+		 <%= f.text_field :typec %>
+		 </div>
+		 <div class="field">
+		 <%= f.label :adress %>
+		 <%= f.text_field :adress %>
+		 </div>
+		 <div class="field">
+		 <%= f.label :tel, "Tell." %>
+		 <%= f.text_field :tel %>
+		 </div>
+		 <div class="field">
+		 <%= f.label :zipcode, "Zip-code" %>
+		 <%= f.text_field :zipcode %>
+		 </div>
+		 <div class="field">
+		 <label>Clinic Avatar</label>
+			<%= image_tag(@clinic.avatar_url) if @clinic.avatar? %> 
+			<%= f.file_field :avatar %>
+			<%= f.hidden_field :avatar_cache %> 
+			</div><br/>
+		<div class="actions">
+		<%= f.submit "Create", class: "btn   btn-primary" %>
+		</div>
+    <% end %>
+  </div>
+  </div>
+</div>

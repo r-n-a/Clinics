@@ -1,0 +1,12 @@
+<% provide(:title, 'All clinics') %>
+<hr>
+<div class="clinic-show">
+<h1>All clinics</h1>
+	<ul class="clinics">
+	  <% @clinics.each do |clinic| %>
+			<li>
+				<%= link_to clinic.name, clinic %>
+			</li>
+	  <% end %>
+	</ul>
+</div>

@@ -1,0 +1,39 @@
+<% provide(:title, 'All procedures') %>
+<div class="order">
+				<div class="row">
+					<div class="span3 " >
+						<p><%= @procedures.count %> Clinics found</p>
+					</div>
+					<div class="span3" >
+						<%= sortable "cost" %>
+					</div>
+				</div>
+	<hr>
+</div>
+	  <% @procedures.each do |procedure| %>
+			
+			<div class="jumbotron">
+				<div class="row">
+					<div class="span3 clinic-img" >
+						<div class="img">
+							<%=  image_tag procedure.clinic.avatar.url.to_s if procedure.clinic.avatar? %>
+						</div>
+					</div>
+					<div class="span4 clinic-descr" >
+							<div class="title"><%= procedure.clinic.name %></div>
+							<div class="adr">Adress: <%= procedure.clinic.adress %></div>
+							<div class="tel">Tell: <%= procedure.clinic.tel[2..-1]%></div>
+					
+					</div>
+					<div class="span2 clinic-price" >
+						<div class="pname center"><%= procedure.name %></div>
+						<div class="pprice center" >$<%= procedure.cost %><br/><br/>
+							<%= button_to "Learn more >>", procedure_path(procedure), class: "btn   btn-primary"  %>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+	  <% end %>
+<hr>

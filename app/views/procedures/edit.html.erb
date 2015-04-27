@@ -1,0 +1,23 @@
+<% provide(:title, 'Edit clinic') %>
+<hr>
+<div class="clinic-show">
+<h1>Edit clinic</h1>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@clinic) do |f| %>
+		  <%= render 'shared/error_messages', object: f.object %>
+		 
+		  <div class="field">
+		 <%= f.label :name %>
+		 <%= f.text_field :name %>
+		 </div>
+		  <div class="field">
+		 <%= f.label :cost, "Cost" %>
+		 <%= f.text_field :cost %>
+		 </div>
+		<br/>
+		<%= f.submit "Save changes", class: "btn   btn-primary" %>
+    <% end %>
+  </div>
+  </div>
+</div>

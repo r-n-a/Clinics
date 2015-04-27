@@ -1,0 +1,17 @@
+	$("#rs2").append("<%= j render(:partial => 'ajax') %>");
+	
+	$('.advice_variant').on('click',function(){
+        $('#q2').val($(this).text());
+        $('#rs2').fadeOut(350).html('');
+    });
+	
+    $('#q2').click(function(){
+        $('#rs2').show();
+    });
+	
+	$('html').click(function(){
+        $('#rs2').hide();
+    });
+
+
+
