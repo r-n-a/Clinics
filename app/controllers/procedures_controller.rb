@@ -10,7 +10,7 @@ class ProceduresController < ApplicationController
 		if  current_user.clinics.first
 			@clinic = current_user.clinics.first
 			@procedures = @clinic.procedures.all
-		elseif current_user.clinics.first
+		elsif current_user.clinics.first
 			@procedure = Procedure.new
 			render 'procedures/new'
 		else
