@@ -1,0 +1,89 @@
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  - username
+  records: 
+  - - 1
+    - r-n-a@ukr.net
+    - $2a$10$cBMqyf/XWdY7trA3SoJ3V./r5jILdidCffGoZRRZ.E9uslKIBsdSi
+    - 
+    - 
+    - 
+    - 18
+    - '2015-04-14 20:44:04.877464'
+    - '2015-04-14 19:09:11.427294'
+    - 10.0.2.2
+    - 10.0.2.2
+    - '2015-03-30 18:47:20.061427'
+    - '2015-04-14 21:25:37.802527'
+    - 
+  - - 2
+    - qwer1@ry.ru
+    - $2a$10$7OBNKbezdyABewp48ot1teeZWrXxggssF0PpbD7X9KJpNO6CaATza
+    - 
+    - 
+    - 
+    - 1
+    - '2015-03-30 19:39:10.441808'
+    - '2015-03-30 19:39:10.441808'
+    - 10.0.2.2
+    - 10.0.2.2
+    - '2015-03-30 19:39:10.424161'
+    - '2015-03-30 19:39:10.446181'
+    - 
+  - - 3
+    - ivanov@urk.net
+    - $2a$10$.mZPCErM6kuayaVCLEMOnOF2vSVZBbSn03lDESRPPZfbs9xKybwpO
+    - 
+    - 
+    - 
+    - 1
+    - '2015-04-20 18:58:26.234408'
+    - '2015-04-20 18:58:26.234408'
+    - 10.0.2.2
+    - 10.0.2.2
+    - '2015-04-20 18:58:26.176610'
+    - '2015-04-20 18:58:26.238022'
+    - 
+  - - 4
+    - test1@ert.ue
+    - $2a$10$J3Zatvx.1ezkxFtpRmq4XeovsLtpQ1.tJpszGjOUWk/jjGIhXfY5.
+    - 
+    - 
+    - 
+    - 1
+    - '2015-04-20 20:16:31.050273'
+    - '2015-04-20 20:16:31.050273'
+    - 10.0.2.2
+    - 10.0.2.2
+    - '2015-04-20 20:16:31.029274'
+    - '2015-04-20 20:16:31.054085'
+    - 
+  - - 5
+    - r-n-a1@ukr.net
+    - $2a$10$2dKFBGpwezwc9OwckHU3xei/FSBGZvkJtYF9FgP6dAJPFyrNDbtdS
+    - 
+    - 
+    - 
+    - 1
+    - '2015-04-25 18:59:06.670384'
+    - '2015-04-25 18:59:06.670384'
+    - 10.0.2.2
+    - 10.0.2.2
+    - '2015-04-25 18:59:06.635283'
+    - '2015-04-25 18:59:06.673723'
+    - 

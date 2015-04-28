@@ -32,6 +32,7 @@ gem 'cancan'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'geokit-rails'
+gem 'yaml_db'
 
 
 group :doc do
