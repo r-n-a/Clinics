@@ -25,11 +25,7 @@ namespace :deploy do
 		task :custom_configs do
 			run "ln -nsf #{shared_path}/config/database.yml #{current_release}/config/"
 		end
-		task :user_files do
-			run "ln -nsf #{shared_path}/public/uploads/ #{current_release}/public/"
-		end
 		task :default do
-			user_files
 			custom_configs
 		end
 	end
