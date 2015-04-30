@@ -246,7 +246,6 @@ DEPENDENCIES
   capistrano_colors
   capybara (= 2.1.0)
   carrierwave
-  coffee-rails (~> 4.1.0)
   devise
   factory_girl_rails (= 4.2.1)
   faker (= 1.1.2)
