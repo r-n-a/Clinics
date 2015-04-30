@@ -40,7 +40,7 @@ gem 'geokit-rails'
 gem 'yaml_db'
 gem 'capistrano'
 gem 'capistrano_colors'
-gem 'rvm-capistrano'
+gem 'rvm-capistrano', require: false
 
 
 group :doc do
